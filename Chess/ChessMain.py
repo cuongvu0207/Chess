@@ -61,7 +61,7 @@ def drawGameState(screen, gs):
     drawPieces(screen, gs.board)
 
 def drawBoard(screen): # Ve ban co
-    colors = [p.Color("brown"), p.Color("Gray")]
+    colors = [p.Color("white"), p.Color("Gray")]
     for r in range(DIMENSION):
         for c in range(DIMENSION):
             color = colors[((r + c) % 2)]
