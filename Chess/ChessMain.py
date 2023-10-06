@@ -16,7 +16,7 @@ def LoadImages(): # Doc quan co
 def main():
     p.init()
     screen = p.display.set_mode((WIDTH, HEIGHT))
-    pygame.display.set_caption("AUTO CHESS")
+    pygame.display.set_caption("League of Legends (TM) Client")
     icon = p.image.load("images/icon.png")
     p.display.set_icon(icon)
     clock =  p.time.Clock()
@@ -46,6 +46,10 @@ def main():
                     gs.makeMove(move)
                     sqSelected = ()
                     playerClicks = []
+            elif e.type == p.KEYDOWN:
+                if e.key == p.K_z:
+                    gs.undoMove()
+
 
 
             drawGameState(screen, gs)

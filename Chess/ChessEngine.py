@@ -20,8 +20,13 @@ class GameState(): # Trang thai
         self.board[move.endRow][move.endCol] = move.pieceMoved
         self.moveLog.append(move)
         self.whiteToMove = not self.whiteToMove # doi nguoi choi
-
-
+    #undo
+    def undoMove(self):
+        if len(self.moveLog)!=0:
+            move = self.moveLog.pop()
+            self.board[move.startRow][move.startCol] = move.pieceMoved
+            self.board[move.endRow][move.endCol] = move.pieceCaptured
+            self.whiteToMove = not self.whiteToMove
 
 class Move(): # Di chuyen quan co
 
