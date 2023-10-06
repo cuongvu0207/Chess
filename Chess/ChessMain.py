@@ -20,7 +20,7 @@ def main():
     icon = p.image.load("images/icon.png")
     p.display.set_icon(icon)
     clock =  p.time.Clock()
-    screen.fill(p.Color("White"))
+    screen.fill(p.Color("Brown"))
     gs = ChessEngine.GameState()
     LoadImages()
     running = True
@@ -61,7 +61,7 @@ def drawGameState(screen, gs):
     drawPieces(screen, gs.board)
 
 def drawBoard(screen): # Ve ban co
-    colors = [p.Color("white"), p.Color("Gray")]
+    colors = [p.Color("brown"), p.Color("Gray")]
     for r in range(DIMENSION):
         for c in range(DIMENSION):
             color = colors[((r + c) % 2)]
